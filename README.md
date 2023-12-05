@@ -16,6 +16,7 @@ c-you can search by username,city,Select on the basis of the size micro,large et
 for this I just calculate the average of the ratings in floor.
 
 3-you can have the original link of the bar whwn you click at the visit bar
+*NOTE: Before adding reviews just refresh the page as the last review you will se as we used local storage.*
 4-you can add review and submit and then *REFRESH TWO TIMES* reviews will updated and  will get updated in the mongodb atlas ans well as on screen you can see the result on VS code also
 
 5-Deplyed App used- Vercel APP
