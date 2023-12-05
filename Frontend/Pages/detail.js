@@ -26,7 +26,7 @@ function postData(breweryData) {
 
   console.log("breweryData", updateData);
 
-  fetch(`http://localhost:8080/breweries/${breweryId}`, {
+  fetch(`https://moengagetask2.onrender.com/breweries/${breweryId}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -77,7 +77,7 @@ function getBreweryIdFromUrl() {
 async function fetchDataById(id) {
   let someID = localStorage.getItem("breweryId") || id;
   try {
-    const response = await fetch(`http://localhost:8080/breweries/${someID}`);
+    const response = await fetch(`https://moengagetask2.onrender.com/breweries/${someID}`);
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }

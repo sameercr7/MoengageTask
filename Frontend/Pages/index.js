@@ -124,7 +124,7 @@ filterAndDisplay();
 // Send data to the backend
 async function sendDataToBackend(data) {
   try {
-    const response = await fetch("http://localhost:8080/breweries", {
+    const response = await fetch("https://moengagetask2.onrender.com/breweries", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -146,7 +146,7 @@ async function sendDataToBackend(data) {
 // Function to fetch data from the backend
 async function fetchDataFromBackend() {
   try {
-    const response = await fetch("http://localhost:8080/breweries");
+    const response = await fetch("https://moengagetask2.onrender.com/breweries");
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
