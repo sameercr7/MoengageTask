@@ -1,6 +1,6 @@
 # MoengageTask
 MoengageTask Assessment
-In this I used 
+Tech Used:
 HTML
 CSS
 JAVASCRIPT
