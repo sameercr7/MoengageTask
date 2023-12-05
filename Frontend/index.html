@@ -39,7 +39,7 @@
         <div class="para">
           <p>
             Don't have an account?
-            <a href="../Register/register.html">Sign up Now</a>
+            <a href="./Pages/Register/register.html">Sign up Now</a>
           </p>
         </div>
       </div>
@@ -80,7 +80,7 @@
             localStorage.setItem("id", data.id);
             localStorage.setItem("username", data.username);
             // Redirect to a new URL
-            window.location.href = "../Home/home.html";
+            window.location.href = "./Pages/Home/home.html";
           })
           .catch((error) => {
             console.error("Error during login:", error.message);
