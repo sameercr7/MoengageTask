@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./home.css" />
+    <title>Document</title>
+  </head>
+  <!-- <i class="fa-solid fa-question"></i> -->
+  <body>
+    <nav class="nav">
+      <div class="navbar">
+        <img
+          src="../../Images/icon.png"
+          style="padding-left: 5px"
+          height="10%"
+          width="5%"
+        />
+        <p style="padding-left: 5px">Brewery</p>
+      </div>
+    </nav>
+
+    <section class="home-hero">
+      <div class="home-img">
+        <img src="../../Images/backimage.jpg" alt="" />
+      </div>
+    </section>
+    <section class="home-search">
+      <h2>Find Your Perfect...</h2>
+      <div class="input-container ipt">
+        <i class="fa-solid fa-magnifying-glass-location"></i>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          value=""
+          placeholder="Username"
+        />
+      </div>
+      <div class="input-container ipt">
+        <i class="fa-solid fa-location-dot"></i>
+        <input type="text" name="city" id="city" value="" placeholder="City" />
+      </div>
+      <div class="input-container slt ipt">
+        <i class="fa-solid fa-question"></i>
+        <select id="opt" name="option">
+          <option value="" selected>Select Your Choice</option>
+          <option value="micro">Micro</option>
+          <option value="nano">Nano</option>
+          <option value="regional">Regional</option>
+          <option value="brewpub">Brewpub</option>
+          <option value="large">Large</option>
+          <option value="planning">Planning</option>
+          <option value="bar">Bar</option>
+          <option value="contract">Contract</option>
+          <option value="proprietor">Proprietor</option>
+          <option value="closed">Closed</option>
+        </select>
+      </div>
+      <!-- <div>
+        <button id="btn" class="btnn">Search</button>
+      </div> -->
+    </section>
+    <section id="card-listings" class="home-listings">
+      <!-- <div class="card">
+           <div class="card-img">
+            <img src="../../Images/cardimage.jpg" alt="" srcset="">
+           </div>
+           <div class="card-details">
+            <div class="card-details-1">
+                <h1>Brewery name</h1>
+                <h1>*****</h1>
+            </div>
+            <p>State, City</p>
+            <div class="card-details-2">
+                <p>Brewery Address</p>
+                <p>|</p>
+                <p>Phone number</p>
+                <p>|</p>
+                <p>Web site URL</p>
+            </div>
+           </div>
+        </div> -->
+    </section>
+    <script src="../index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c01e311c8f.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

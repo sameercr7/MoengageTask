@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Register/register.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="hero-image">
+      <div class="log">
+        <h1 class="hh2">Register</h1>
+        <input
+          type="text"
+          name="uername"
+          id="username"
+          placeholder="Username"
+        />
+        <input type="email" name="email" id="email" placeholder="Email" />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+        />
+        <button id="resID" class="resClass">
+          <!-- <a href="../Login/login.html">Submit</a> -->
+          Submit
+        </button>
+      </div>
+    </div>
+
+    <script>
+      let resBtn = document.getElementById("resID");
+      resBtn.addEventListener("click", sendRegistrationDetails);
+
+      function sendRegistrationDetails() {
+        event.preventDefault();
+
+        let usernameInput = document.getElementById("username");
+        let emailInput = document.getElementById("email");
+        let passwordInput = document.getElementById("password");
+
+        const registrationDetails = {
+          username: usernameInput.value,
+          email: emailInput.value,
+          password: passwordInput.value,
+        };
+
+        console.log("registrationDetails", registrationDetails);
+
+        fetch("http://localhost:8080/register", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(registrationDetails),
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+          })
+          .then((data) => {
+            console.log("Registration successful:", data);
+            // Redirect to a new URL
+            window.location.href = "../Login/login.html";
+          })
+          .catch((error) => {
+            console.error("Error during registration:", error.message);
+          });
+      }
+    </script>
+  </body>
+</html>

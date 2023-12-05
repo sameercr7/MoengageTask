@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Details Page</title>
+    <link rel="stylesheet" href="../Details/detail.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="navbar">
+        <img
+          src="../../Images/icon.png"
+          style="padding-left: 5px"
+          height="10%"
+          width="5%"
+        />
+        <p style="padding-left: 5px">Brewery</p>
+      </div>
+    </nav>
+    <section class="details_img">
+      <img
+        width="100%"
+        src="https://img.freepik.com/free-photo/front-view-whiskey-with-orange-cognac-glass-with-copy-space_23-2148673804.jpg?size=626&ext=jpg&ga=GA1.1.2057281508.1687237735&semt=sph"
+        alt=""
+        srcset=""
+      />
+    </section>
+    <section class="info">
+      <div class="Brewery_info">
+        <!-- <div>
+          <img src="../../Images/icon.png" alt="" />
+          <p>info1</p>
+        </div> -->
+      </div>
+    </section>
+    <section class="review">
+      <div class="review_heading">
+        <h1>Reviews</h1>
+      </div>
+      <div id="all_reviews_container" class="all_reviews_container">
+        <!-- <div class="review_card">
+          <div class="review_img">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-cDO2BrZ-LeGavwLH-vc8OUfRSwz-A4SkmwrXis-JKw&s"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="review_details">
+            <p>username</p>
+            <p>*****</p>
+            <p>Description</p>
+          </div>
+        </div> -->
+      </div>
+    </section>
+    <section class="rev">
+      <div class="review_heading">
+        <h1>Submit Your Review!</h1>
+      </div>
+
+      <div class="submit_review">
+        <label for="description"> Description: </label>
+        <textarea name="" id="description" cols="30" rows="10"></textarea>
+        <br />
+        <div class="rating">
+          <!-- <h3 id="rate"></h3> -->
+          <input type="radio" id="star5" name="rating" value="5" />
+          <label for="star5">&#9733;</label>
+          <input type="radio" id="star4" name="rating" value="4" />
+          <label for="star4">&#9733;</label>
+          <input type="radio" id="star3" name="rating" value="3" />
+          <label for="star3">&#9733;</label>
+          <input type="radio" id="star2" name="rating" value="2" />
+          <label for="star2">&#9733;</label>
+          <input type="radio" id="star1" name="rating" value="1" />
+          <label for="star1">&#9733;</label>
+        </div>
+        <div id="resultt"></div>
+
+        <!-- <label for="star5" style="color: orange;">&#9733;</label><label for="star5" style="color: orange;">&#9733;</label><label for="star5" style="color: orange;">&#9733;</label> -->
+
+        <br />
+        <div class="set-btn">
+          <button id="submit_review_btn">Submit</button>
+        </div>
+      </div>
+    </section>
+    <script src="../detail.js"></script>
+    <script></script>
+  </body>
+</html>

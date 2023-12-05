@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./login.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="hero-image">
+      <div class="log">
+        <h1 class="hh2">Welcome, back!</h1>
+        <br />
+
+        <input
+          type="text"
+          name="uername"
+          id="username"
+          placeholder="Username"
+        />
+
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+        />
+
+        <br />
+
+        <button id="logId" class="logClass">
+          <!-- <a href="../Home/home.html">Login</a> -->
+          Login
+        </button>
+
+        <br />
+
+        <div class="para">
+          <p>
+            Don't have an account?
+            <a href="../Register/register.html">Sign up Now</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let loginBtn = document.getElementById("logId");
+      loginBtn.addEventListener("click", sendLoginDetails);
+
+      function sendLoginDetails() {
+        event.preventDefault();
+
+        let usernameInput = document.getElementById("username");
+        let passwordInput = document.getElementById("password");
+
+        const loginDetails = {
+          username: usernameInput.value,
+          password: passwordInput.value,
+        };
+
+        console.log("loginDetails", loginDetails);
+
+        fetch("http://localhost:8080/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(loginDetails),
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+          })
+          .then((data) => {
+            console.log("Login successful:", data);
+            localStorage.setItem("id", data.id);
+            localStorage.setItem("username", data.username);
+            // Redirect to a new URL
+            window.location.href = "../Home/home.html";
+          })
+          .catch((error) => {
+            console.error("Error during login:", error.message);
+            alert("Error during login: Check your credentials!");
+          });
+      }
+    </script>
+  </body>
+</html>
